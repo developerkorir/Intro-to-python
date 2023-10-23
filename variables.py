@@ -15,7 +15,7 @@ distance_to_moyale = 750
 # use underscores to name variables
 maximum_loan_amount = 10000
 
-# Boolean 
+# Boolean
 isConnected = True
 is_student = False
 
