@@ -23,4 +23,3 @@ print(name, "is from", city, "and qualifies for", maximum_loan_amount)
 
 # Constants variable names are always all in uppercase
 MAX_WITHDRAWAL_AMOUNT = 60000
-

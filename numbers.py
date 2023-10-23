@@ -21,4 +21,3 @@ print(10 % 2)
 # Floor operator  (Remove decimal in numbers)
 # Result is in a whole number
 print(10//3)
-
