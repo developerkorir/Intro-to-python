@@ -6,3 +6,8 @@ numbers = [1, 2, 3, 4, 5]
 # x hold the value of a number at a particular index
 for x in numbers:
     print(x)
+
+
+products = ["iPhone", "Nokia", "Samsung", "Oppo"]
+for product in products:
+    print(product)
