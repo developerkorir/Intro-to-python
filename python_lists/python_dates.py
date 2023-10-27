@@ -18,4 +18,8 @@ _180_days_future = today+timedelta(days=180)
 print(_180_days_future)
 
 # get date from string to date
+date_string = "07 April 2000"
+date_object = datetime.strptime(date_string, "%d %B %Y")
+print(date_object)
+
 
