@@ -18,3 +18,7 @@ class Account:
 acc1 = Account("Jude", "0001", 12900)
 acc1.deposit(100)
 print(acc1.acc_balance)
+
+acc2 = Account(balance=580, name="Ibaks", acc_no="0002")  # using named parameters
+acc2.deposit(20)
+print(acc2.acc_balance)
