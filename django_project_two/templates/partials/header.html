@@ -38,7 +38,7 @@
 							<!-- Cart Item -->
 							<div class="media">
 								<a class="pull-left" href="#!">
-									<img class="media-object" src="images/shop/cart/cart-1.jpg" alt="image" />
+									<img class="media-object" src="{% static 'main_assets/images/shop/cart/cart-1.jpg' %}" alt="image" />
 								</a>
 								<div class="media-body">
 									<h4 class="media-heading"><a href="#!">Ladies Bag</a></h4>
@@ -53,7 +53,7 @@
 							<!-- Cart Item -->
 							<div class="media">
 								<a class="pull-left" href="#!">
-									<img class="media-object" src="images/shop/cart/cart-2.jpg" alt="image" />
+									<img class="media-object" src="{% static 'main_assets/images/shop/cart/cart-2.jpg' %}" alt="image" />
 								</a>
 								<div class="media-body">
 									<h4 class="media-heading"><a href="#!">Ladies Bag</a></h4>
@@ -138,17 +138,17 @@
 
 					<!-- Home -->
 					<li class="dropdown ">
-						<a href="#">Shop</a>
+						<a href="{% url 'shop' %}">Shop</a>
 					</li><!-- / Home -->
 
 					<!-- Home -->
 					<li class="dropdown ">
-						<a href="#">Contact Us</a>
+						<a href="{% url 'contact' %}">Contact Us</a>
 					</li><!-- / Home -->
 
 					<!-- Home -->
 					<li class="dropdown ">
-						<a href="#">Faq</a>
+						<a href="{% url 'faq' %}">Faq</a>
 					</li><!-- / Home -->
 
 
