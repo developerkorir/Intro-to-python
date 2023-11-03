@@ -1,0 +1,66 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="utf-8">
+  <title>Clothline</title>
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="Get your outft from the best">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <meta name="author" content="C Korir">
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" type="image/x-icon" href="{% static 'main_assets/images/favicon.png' %}" />
+
+  <link rel="stylesheet" href="{% static 'main_assets/plugins/themefisher-font/style.css' %}">
+  <!-- bootstrap.min css -->
+  <link rel="stylesheet" href="{% static 'main_assets/plugins/bootstrap/css/bootstrap.min.css' %}">
+
+  <!-- Animate css -->
+  <link rel="stylesheet" href="{% static 'main_assets/plugins/animate/animate.css' %}">
+  <!-- Slick Carousel -->
+  <link rel="stylesheet" href="{% static 'main_assets/plugins/slick/slick.css' %}">
+  <link rel="stylesheet" href="{% static 'main_assets/plugins/slick/slick-theme.css' %}">
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="{% static 'main_assets/css/style.css' %}">
+
+</head>
+
+<body id="body">
+	{% include 'partials/header.html' %}
+
+	{% block content %}
+
+	{% endblock %}
+
+	{% include 'partials/footer.html' %}
+    <!-- Main jQuery -->
+    <script src="{% static 'main_assets/plugins/jquery/dist/jquery.min.js' %}"></script>
+    <!-- Bootstrap 3.1 -->
+    <script src="{% static 'main_assets/plugins/bootstrap/js/bootstrap.min.js' %}"></script>
+    <!-- Bootstrap Touchpin -->
+    <script src="{% static 'main_assets/plugins/bootstrap-touchspin/dist/jquery.bootstrap-touchspin.min.js' %}"></script>
+    <!-- Instagram Feed Js -->
+    <script src="{% static 'main_assets/plugins/instafeed/instafeed.min.js' %}"></script>
+    <!-- Video Lightbox Plugin -->
+    <script src="{% static 'main_assets/plugins/ekko-lightbox/dist/ekko-lightbox.min.js' %}"></script>
+    <!-- Count Down Js -->
+    <script src="{% static 'main_assets/plugins/syo-timer/build/jquery.syotimer.min.js' %}"></script>
+
+    <!-- slick Carousel -->
+    <script src="{% static 'main_assets/plugins/slick/slick.min.js' %}"></script>
+    <script src="{% static 'main_assets/plugins/slick/slick-animation.min.js' %}"></script>
+
+    <!-- Google Mapl -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCC72vZw-6tGqFyRhhg5CkF2fqfILn2Tsw"></script>
+    <script type="text/javascript" src="{% static 'main_assets/plugins/google-map/gmap.js' %}"></script>
+
+    <!-- Main Js File -->
+    <script src="{% static 'main_assets/js/script.js' %}"></script>
+
+
+  </body>
+  </html>
