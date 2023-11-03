@@ -32,6 +32,27 @@
 		<hr>
 
 		<h2 class="text-center text-success">Welcome {{ name }}, you are {{ age }} years old</h2>
+
+		<table class="table table-bordered">
+			<tr>
+				<td>ID</td>
+				<td>First Name</td>
+				<td>Last Name</td>
+				<td>Email</td>
+				<td>Country</td>
+			</tr>
+			{% for user in users %}
+{#				tr>td*5#}
+				<tr>
+					<td>{{ user.id }}</td>
+					<td>{{ user.first_name }}</td>
+					<td>{{ user.last_name }}</td>
+					<td>{{ user.email }}</td>
+					<td>{{ user.country }}</td>
+				</tr>
+			{% endfor %}
+
+		</table>
 	</div>
 
 <script src="{% static 'main_assets/js/bootstrap.min.js' %}"></script>
