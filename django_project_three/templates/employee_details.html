@@ -14,8 +14,10 @@
 		<div class="row justify-content-center">
 			<div class="col-sm-5">
 				<div class="card text-center">
-					<img src="{{ employee.profile.url }}" alt="" class="card-img-top">
 					<div class="card-body">
+						{% if employee.profile %}
+							<img src="{{ employee.profile.url }}" alt="" class="card-img-top">
+						{% endif %}
 						<h2 class="card-title">{{ employee.name }}</h2>
 						<p class="card-text">Email: {{ employee.email }}</p>
 						<p class="card-text">Born on: {{ employee.dob }}</p>
