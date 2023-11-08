@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 
 from main_app.app_forms import EmployeeForm
 from main_app.models import Employee
@@ -18,10 +18,17 @@ def home(request):
 
 
 def all_employees(request):
-    employees = Employee.objects.all()  # SELECT * From employees
+    # employees = Employee.objects.all().ordered('salary')
+    employees = Employee.objects.all().order_by('-salary')  # SELECT * From employees
     return render(request, 'all_employees.html', {"employees": employees})
 
 
 def employee_details(request, emp_id):
     employee = Employee.objects.get(pk=emp_id)  # SELECT * From employees WHERE id=1
     return render(request, 'employee_details.html', {"employee": employee})
+
+
+def employee_delete(request, emp_id):
+    employee = get_object_or_404(Employee, pk=emp_id)
+    employee.delete()
+    return redirect('all')
