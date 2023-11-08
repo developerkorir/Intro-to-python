@@ -26,7 +26,7 @@
 									<a href="/employees/{{ employee.id }}">{{ employee.name }}</a>
 								</td>
 								<td>{{ employee.email }}</td>
-								<td>{{ employee.dob }}</td>
+								<td>{{ employee.dob | date:"d-m-Y" }}</td>
 								<td>{{ employee.salary }}</td>
 							</tr>
 						{% endfor %}
