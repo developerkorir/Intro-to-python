@@ -1,5 +1,6 @@
 from datetime import datetime
 
+from django.core.paginator import Paginator
 from django.db.models import Q
 from django.shortcuts import render, redirect, get_object_or_404
 
@@ -33,7 +34,10 @@ def all_employees(request):
     # employees = Employee.objects.filter(Q(name__contains="la") & ~Q(salary__gt=70000))
 
     # employees = Employee.objects.filter(dob__day=day, dob__month=month)
-    return render(request, 'all_employees.html', {"employees": employees})
+    paginator = Paginator(employees, 20)
+    page_number = request.GET.get("page")
+    data = paginator.get_page(page_number)
+    return render(request, 'all_employees.html', {"employees": data})
 
 
 def employee_details(request, emp_id):
