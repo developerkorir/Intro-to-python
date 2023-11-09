@@ -21,7 +21,7 @@ def home(request):
 
 
 def all_employees(request):
-    # employees = Employee.objects.all()
+    employees = Employee.objects.all()
     # employees = Employee.objects.all().ordered('salary')
     # employees = Employee.objects.all().order_by('-salary')  # SELECT * From employees
     # employees = Employee.objects.filter(name__istartswith='la').order_by('-salary')
@@ -32,7 +32,7 @@ def all_employees(request):
     month = today.month
     # employees = Employee.objects.filter(Q(name__contains="la") & ~Q(salary__gt=70000))
 
-    employees = Employee.objects.filter(dob__day=day, dob__month=month)
+    # employees = Employee.objects.filter(dob__day=day, dob__month=month)
     return render(request, 'all_employees.html', {"employees": employees})
 
 
