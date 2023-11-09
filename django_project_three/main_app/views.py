@@ -45,3 +45,10 @@ def employee_delete(request, emp_id):
     employee = get_object_or_404(Employee, pk=emp_id)
     employee.delete()
     return redirect('all')
+
+
+def search_employee(request):
+    search_word = request.GET['search_word']
+    employees = Employee.objects.filter(Q(name__icontains=search_word) | Q(email__icontains=search_word))
+    # Elastic search - NoSQL database
+    return render(request, 'all_employees.html', {"employees": employees})
