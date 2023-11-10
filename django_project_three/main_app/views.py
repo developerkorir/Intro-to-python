@@ -34,7 +34,7 @@ def all_employees(request):
     # employees = Employee.objects.filter(Q(name__contains="la") & ~Q(salary__gt=70000))
 
     # employees = Employee.objects.filter(dob__day=day, dob__month=month)
-    paginator = Paginator(employees, 20)
+    paginator = Paginator(employees, 40)
     page_number = request.GET.get("page")
     data = paginator.get_page(page_number)
     return render(request, 'all_employees.html', {"employees": data})
@@ -55,4 +55,7 @@ def search_employee(request):
     search_word = request.GET['search_word']
     employees = Employee.objects.filter(Q(name__icontains=search_word) | Q(email__icontains=search_word))
     # Elastic search - NoSQL database
-    return render(request, 'all_employees.html', {"employees": employees})
+    paginator = Paginator(employees, 40)
+    page_number = request.GET.get("page")
+    data = paginator.get_page(page_number)
+    return render(request, 'all_employees.html', {"employees": data})
