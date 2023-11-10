@@ -59,3 +59,15 @@ def search_employee(request):
     page_number = request.GET.get("page")
     data = paginator.get_page(page_number)
     return render(request, 'all_employees.html', {"employees": data})
+
+
+def employee_update(request, emp_id):
+    employee = get_object_or_404(Employee, pk=emp_id)  # SELECT * FROM employees where id=?
+    if request.method == "POST":
+        form = EmployeeForm(request.POST, instance=employee)
+        if form.is_valid():
+            form.save()
+            return redirect('details', emp_id)
+    else:
+        form = EmployeeForm(instance=employee)
+    return render(request, "update.html", {"form": form})

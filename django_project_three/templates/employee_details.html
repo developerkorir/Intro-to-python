@@ -18,11 +18,13 @@
 					<h2 class="card-title">{{ employee.name }}</h2>
 					<p class="card-text">Email: {{ employee.email }}</p>
 					<p class="card-text">Born on: {{ employee.dob }}</p>
-					<p class="card-text">Kes: {{ employee.salary }}</p>
+					<p class="card-text">Salary: Kes: {{ employee.salary | intcomma}} </p>
 					<p class="card-text">Added: {{ employee.created_at | naturaltime }}</p>
 					<p class="card-text">Updated: {{ employee.updated_at | naturaltime }}</p>
 
-					<a href="{% url 'delete' employee.id %}" class="btn btn-danger">Delete</a>
+					<a href="{% url 'delete' employee.id %}" class="btn btn-danger w-50 mb-1">Delete</a>
+					<br>
+					<a href="{% url 'update' employee.id %}" class="btn btn-info w-50 ">Update</a>
 				</div>
 				{#				employees/delete/id#}
 			</div>
