@@ -11,6 +11,8 @@
 	<div class="row justify-content-center">
 		<div class="col-sm-5">
 			<div class="card text-center">
+
+			{% include 'alerts.html' %}
 				<div class="card-body">
 					{% if employee.profile %}
 						<img src="{{ employee.profile.url }}" height="200px" width="200px" alt="" class="card-img-top">
