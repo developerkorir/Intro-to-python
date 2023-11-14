@@ -13,7 +13,7 @@ from main_app.models import Employee
 
 # Create your views here.
 @login_required
-@permission_required('main_app.add_employee')
+@permission_required('main_app.add_employee', raise_exception=True)
 def home(request):
     if request.method == "POST":
         form = EmployeeForm(request.POST, request.FILES)
