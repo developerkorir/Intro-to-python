@@ -28,7 +28,7 @@ def home(request):
 
 
 @login_required
-@permission_required('main_app.view_employee')
+@permission_required('main_app.view_employee', raise_exception=True)
 def all_employees(request):
     employees = Employee.objects.all()
     # employees = Employee.objects.all().ordered('salary')
